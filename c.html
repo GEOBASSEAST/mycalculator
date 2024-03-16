@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            body{
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: whitesmoke;
+            }
+
+            button{
+                width: 100px;
+                height: 100px;
+                border-radius: 50px;
+                border: none;
+                background-color: gray;
+                color: white;
+                font-size: 50px;
+                font-weight: bold;
+                cursor: pointer;
+                align-items: center;
+                justify-content: center;
+            }
+
+            button:hover{
+                background-color: blue;
+            }
+
+            button:active{
+                background-color: blueviolet;
+            }
+
+            .operator-btn{
+                background-color: hsl(35, 100%, 55%);
+            }
+
+            .operator-btn:hover{
+                background-color: hsl(35, 100%, 65%);
+            }
+
+            .operator-btn:active{
+                background-color: hsl(35, 100%, 75%);
+            }
+
+
+
+            #keys{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+                padding: 25px;
+            }
+
+            #calcularor{
+                background-color: antiquewhite;
+                border-radius: 15px;
+                max-width: 500px;
+                overflow: hidden;
+            }
+
+            #display{
+                display: flex;
+                width: 85%;
+                padding: 20px;
+                font-size: 5rem;
+                text-align: left;
+                border: none;
+                background-color: antiquewhite;
+                color: white;
+                border-radius: 10px;
+
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div id="calculator">
+            <input id="display" readonly>
+            <div id="keys">
+                <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="appendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="appendToDisplay('.')">.</button>
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="calculate()" class="operator-btn">=</button>
+            </div>
+
+        </div>
+
+
+        <script>
+            const display = document.getElementById("display");
+
+            function appendToDisplay(input){
+                display.value += input;
+
+            }
+
+            function clearDisplay(){
+                display.value ="";
+            }
+
+            function calculate(){
+                try{
+                display.value = eval(display.value);
+                }
+                catch(error){
+                    display.value = "error";
+                }
+
+            }
+        </script>
+            
+    </body>
+</html>
