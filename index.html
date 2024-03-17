@@ -3,6 +3,102 @@
     <head>
         <style>
 
+@media only screen and (max-width: 390px) {
+
+    body{
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                
+            }
+
+            .bor{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: 500px;
+                height: 800px;
+                border: 5px;
+                border-radius: 10px;
+                background-color: black;
+                border-width: 10px;
+            }
+
+
+            button{
+                width: 100px;
+                height: 100px;
+                border-radius: 50px;
+                border: none;
+                background-color: gray;
+                color: white;
+                font-size: 50px;
+                font-weight: bold;
+                cursor: pointer;
+                align-items: center;
+                justify-content: center;
+            }
+
+            button:hover{
+                background-color: blue;
+            }
+
+            button:active{
+                background-color: blueviolet;
+            }
+
+            .operator-btn{
+                background-color: hsl(35, 100%, 55%);
+            }
+
+            .operator-btn:hover{
+                background-color: hsl(35, 100%, 65%);
+            }
+
+            .operator-btn:active{
+                background-color: hsl(35, 100%, 75%);
+            }
+
+
+
+            #keys{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+                padding: 25px;
+            }
+
+            #calcularor{
+                background-color: antiquewhite;
+                border-radius: 15px;
+                max-width: 500px;
+                overflow: hidden;
+                border: 10px;
+                border-radius: 15px;
+                border-color: black;
+            }
+
+            #display{
+                display: flex;
+                width: 440px;
+                padding: 20px;
+                font-size: 5rem;
+                text-align: center;
+                border: none;
+                background-color: gainsboro;
+                color: black;
+                border-radius: 10px;
+                border-color: azure;
+               
+
+            }
+
+
+}
+
             body{
                 margin: 0;
                 display: flex;
